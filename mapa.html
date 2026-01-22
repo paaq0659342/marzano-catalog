@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ubicación | Dúplex Penthouse La Aurora</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #1a1a1a;
+            --accent: #c5a059;
+            --white: #ffffff;
+            --bg: #fdfdfd;
+        }
+
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: 'Outfit', sans-serif;
+            background-color: var(--bg);
+        }
+
+        header {
+            background: var(--primary);
+            color: var(--white);
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .btn-back {
+            color: var(--white);
+            text-decoration: none;
+            border: 1px solid var(--accent);
+            padding: 0.5rem 1.2rem;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+
+        .btn-back:hover {
+            background: var(--accent);
+            color: var(--primary);
+        }
+
+        #map {
+            height: calc(100vh - 60px);
+            width: 100%;
+        }
+
+        .map-info {
+            position: absolute;
+            bottom: 30px;
+            left: 30px;
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            max-width: 300px;
+            z-index: 1000;
+            border-left: 5px solid var(--accent);
+        }
+
+        .map-info h2 {
+            margin: 0 0 10px 0;
+            font-size: 1.2rem;
+            color: var(--primary);
+        }
+
+        .map-info p {
+            margin: 0;
+            font-size: 0.9rem;
+            color: #666;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div style="font-weight: 600; font-size: 1.2rem; letter-spacing: 1px;">UBICACIÓN PREMIUM</div>
+        <a href="index.html" class="btn-back">Volver al Catálogo</a>
+    </header>
+
+    <div id="map"></div>
+
+    <div class="map-info">
+        <h2>La Aurora, Miraflores</h2>
+        <p>Ubicación estratégica cerca al Colegio St. George’s. Una zona residencial exclusiva, segura y con excelente
+            conectividad.</p>
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <script>
+        // Coordinates: -12.118121, -77.008819
+        const lat = -12.118121;
+        const lng = -77.008819;
+
+        const map = L.map('map').setView([lat, lng], 18);
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+            attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+        }).addTo(map);
+
+        // Marker for the property
+        const marker = L.marker([lat, lng]).addTo(map);
+        marker.bindPopup("<b>Dúplex Penthouse</b><br>Marzano 15XX, La Aurora.").openPopup();
+
+        // Shaded area of 50 m2
+        // Area = pi * r^2 => 50 = pi * r^2 => r = sqrt(50/pi) approx 4 meters
+        const circle = L.circle([lat, lng], {
+            color: '#c5a059',
+            fillColor: '#c5a059',
+            fillOpacity: 0.3,
+            radius: 10 // ~4m radius = ~50m2
+        }).addTo(map);
+
+    </script>
+</body>
+
+</html>

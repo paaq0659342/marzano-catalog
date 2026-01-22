@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dúplex Penthouse Premium | La Aurora, Miraflores</title>
+    <!-- 
+      BLOGGER NOTICE: 
+      1. Switch to 'HTML View' in your Blogger editor.
+      2. Paste this entire code.
+      3. Upload images to Blogger and replace the 'https://storage.googleapis.com/inmuebles065/...' paths with the Google URLs.
+    -->
+    <style>
+        /* INLINED CSS */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap');
+
+        :root {
+            --primary: #1a1a1a;
+            --accent: #c5a059;
+            --accent-hover: #b38f4d;
+            --text: #333333;
+            --text-light: #666666;
+            --bg: #fdfdfd;
+            --white: #ffffff;
+            --glass: rgba(255, 255, 255, 0.8);
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            --transition: all 0.3s ease;
+        }
+
+        /* Reset for Blogger themes */
+        .blogger-catalog-wrapper * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            border: none;
+        }
+
+        .blogger-catalog-wrapper {
+            font-family: 'Inter', sans-serif;
+            color: var(--text);
+            background-color: var(--bg);
+            line-height: 1.6;
+            overflow-x: hidden;
+            width: 100%;
+        }
+
+        .blogger-catalog-wrapper h1,
+        .blogger-catalog-wrapper h2,
+        .blogger-catalog-wrapper h3,
+        .blogger-catalog-wrapper h4 {
+            font-family: 'Outfit', sans-serif;
+            font-weight: 600;
+        }
+
+        .blogger-catalog-wrapper a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition);
+        }
+
+        .blogger-catalog-wrapper img {
+            max-width: 100%;
+            display: block;
+        }
+
+        /* Header & Nav (Hidden or simplified for Blogspot posts) */
+        .blogger-catalog-wrapper header {
+            background: var(--glass);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            padding: 1rem 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .blogger-catalog-wrapper nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .blogger-catalog-wrapper .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 5px;
+            z-index: 1001;
+        }
+
+        .blogger-catalog-wrapper .hamburger span {
+            width: 25px;
+            height: 3px;
+            background-color: var(--primary);
+            transition: all 0.3s ease;
+        }
+
+        .blogger-catalog-wrapper .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            font-family: 'Outfit', sans-serif;
+        }
+
+        /* Hero Section */
+        .blogger-catalog-wrapper .hero {
+            height: 600px;
+            /* Adjusted for Blogspot */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            color: var(--white);
+            text-align: center;
+            overflow: hidden;
+            border-radius: 12px;
+            margin-bottom: 4rem;
+        }
+
+        .blogger-catalog-wrapper .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            /* REPLACE WITH HOSTED URL */
+            background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6)), url('https://storage.googleapis.com/inmuebles065/DJI_0180.webp');
+            background-size: cover;
+            background-position: center;
+            z-index: -1;
+        }
+
+        .blogger-catalog-wrapper .hero-content h1 {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            letter-spacing: -1px;
+        }
+
+        .blogger-catalog-wrapper .btn {
+            display: inline-block;
+            padding: 1.2rem 2.5rem;
+            background-color: var(--accent);
+            color: var(--white) !important;
+            font-weight: 600;
+            border-radius: 4px;
+            transition: var(--transition);
+        }
+
+        /* Stats Section */
+        .blogger-catalog-wrapper .property-stats {
+            background: #1a1a1a;
+            color: white;
+            padding: 4rem 2rem;
+            margin-bottom: 4rem;
+            border-radius: 12px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 2rem;
+            text-align: center;
+        }
+
+        .blogger-catalog-wrapper .stat-item h4 {
+            font-size: 2.5rem;
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+        }
+
+        /* Features */
+        .blogger-catalog-wrapper .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2.5rem;
+            margin-bottom: 6rem;
+        }
+
+        .blogger-catalog-wrapper .feature-card {
+            background: var(--white);
+            padding: 2.5rem;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        /* Gallery */
+        .blogger-catalog-wrapper .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 6rem;
+        }
+
+        .blogger-catalog-wrapper .gallery-item {
+            position: relative;
+            border-radius: 8px;
+            overflow: hidden;
+            height: 250px;
+            cursor: pointer;
+        }
+
+        .blogger-catalog-wrapper .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .blogger-catalog-wrapper .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .blogger-catalog-wrapper .gallery-item .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.3);
+            opacity: 0;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+
+        .blogger-catalog-wrapper .gallery-item:hover .overlay {
+            opacity: 1;
+        }
+
+        /* Contact Wrapper */
+        .blogger-catalog-wrapper .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            background: var(--white);
+            padding: 4rem;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+            margin-bottom: 4rem;
+        }
+
+        .blogger-catalog-wrapper .form-group {
+            margin-bottom: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .blogger-catalog-wrapper .form-group input,
+        .blogger-catalog-wrapper .form-group textarea {
+            padding: 1rem;
+            border: 1px solid #eee;
+            border-radius: 4px;
+            width: 100%;
+        }
+
+        /* Lightbox */
+        #blogger-lightbox {
+            display: none;
+            position: fixed;
+            z-index: 9999;
+            padding-top: 50px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.95);
+            backdrop-filter: blur(5px);
+        }
+
+        #blogger-lightbox-img {
+            margin: auto;
+            display: block;
+            max-width: 90%;
+            max-height: 80vh;
+            border-radius: 4px;
+            box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+        }
+
+        .blogger-close,
+        .blogger-prev,
+        .blogger-next {
+            position: absolute;
+            color: white;
+            font-size: 30px;
+            font-weight: bold;
+            cursor: pointer;
+            z-index: 10000;
+        }
+
+        .blogger-close {
+            top: 20px;
+            right: 35px;
+        }
+
+        .blogger-prev {
+            top: 50%;
+            left: 20px;
+        }
+
+        .blogger-next {
+            top: 50%;
+            right: 20px;
+        }
+
+        /* Reveal Animations */
+        .blogger-catalog-wrapper .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+
+        .blogger-catalog-wrapper .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Responsive Improvements */
+        @media (max-width: 768px) {
+            .blogger-catalog-wrapper .hamburger {
+                display: flex;
+            }
+
+            .blogger-catalog-wrapper .nav-links {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 70%;
+                height: 100vh;
+                background: var(--white);
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                transition: 0.3s ease;
+                box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+                z-index: 1000;
+            }
+
+            .blogger-catalog-wrapper .nav-links.active {
+                right: 0;
+            }
+
+            .blogger-catalog-wrapper .hero-content h1 {
+                font-size: 2rem;
+            }
+
+            .blogger-catalog-wrapper .gallery-grid {
+                grid-template-columns: 1fr !important;
+            }
+
+            .blogger-catalog-wrapper .contact-container {
+                grid-template-columns: 1fr;
+                padding: 2rem 1.5rem;
+            }
+
+            /* Hamburger Animation */
+            .blogger-catalog-wrapper .hamburger.active span:nth-child(1) {
+                transform: rotate(45deg) translate(5px, 6px);
+            }
+
+            .blogger-catalog-wrapper .hamburger.active span:nth-child(2) {
+                opacity: 0;
+            }
+
+            .blogger-catalog-wrapper .hamburger.active span:nth-child(3) {
+                transform: rotate(-45deg) translate(5px, -6px);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .blogger-catalog-wrapper .contact-container {
+                grid-template-columns: 1fr;
+            }
+
+            .blogger-catalog-wrapper .hero-content h1 {
+                font-size: 2rem;
+            }
+
+            .blogger-catalog-wrapper nav {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="blogger-catalog-wrapper">
+        <header>
+            <nav>
+                <a href="#" class="logo">LUXURY AURORA</a>
+            </nav>
+        </header>
+
+        <main>
+            <section id="inicio" class="hero">
+                <div class="hero-bg"></div>
+                <div class="hero-content">
+                    <h1>Dúplex Penthouse Premium</h1>
+                    <p>Ubicado en el corazón de La Aurora, Miraflores.</p>
+                    <div class="hero-cta">
+                        <a href="#contacto" class="btn">Solicitar Información</a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="property-stats">
+                <div class="stat-item">
+                    <h4>211</h4>
+                    <p>M2 Totales</p>
+                </div>
+                <div class="stat-item">
+                    <h4>4</h4>
+                    <p>Dormitorios</p>
+                </div>
+                <div class="stat-item">
+                    <h4>4</h4>
+                    <p>Baños</p>
+                </div>
+                <div class="stat-item">
+                    <h4>2</h4>
+                    <p>Cocheras</p>
+                </div>
+            </section>
+
+            <section id="detalles">
+                <div style="text-align: center; margin-bottom: 4rem;">
+                    <h2>El Inmueble</h2>
+                    <div style="width: 60px; height: 3px; background: var(--accent); margin: 10px auto;"></div>
+                </div>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <h3>Terraza Privada</h3>
+                        <p>Con área de parrilla y zona social.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>Ubicación Premium</h3>
+                        <p>Cerca al Colegio St. George’s en La Aurora.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>Acabados A1</h3>
+                        <p>Diseño moderno y ambientes iluminados.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="ubicacion"
+                style="background-color: #f0f0f0; border-radius: 12px; margin-bottom: 4rem; padding: 4rem 2rem;">
+                <div style="text-align: center; margin-bottom: 2rem;">
+                    <h2>Ubicación Estratégica</h2>
+                    <div style="width: 60px; height: 3px; background: var(--accent); margin: 10px auto;"></div>
+                </div>
+                <div style="text-align: center;">
+                    <p
+                        style="font-size: 1.15rem; margin-bottom: 2rem; max-width: 800px; margin-left: auto; margin-right: auto;">
+                        Vive en el corazón de **La Aurora, Miraflores**, una de las zonas más seguras y exclusivas de
+                        Lima.
+                    </p>
+                    <a href="mapa.html" class="btn" style="background-color: var(--primary);">Ver Mapa Interactivo</a>
+                </div>
+            </section>
+
+            <section id="galeria">
+                <div style="text-align: center; margin-bottom: 4rem;">
+                    <h2>Galería de Fotos</h2>
+                    <div style="width: 60px; height: 3px; background: var(--accent); margin: 10px auto;"></div>
+                </div>
+                <div class="gallery-grid">
+                    <!-- Hosted on Google Cloud Storage -->
+                    <div class="gallery-item" onclick="openBloggerLightbox(0)">
+                        <img src="https://storage.googleapis.com/inmuebles065/thumbs/DJI_0177_thumb.webp"
+                            data-full="https://storage.googleapis.com/inmuebles065/DJI_0177.webp"
+                            alt="Vista Exterior Aérea">
+                        <div class="overlay"><span>Ampliar Vista</span></div>
+                    </div>
+                    <div class="gallery-item" onclick="openBloggerLightbox(1)">
+                        <img src="https://storage.googleapis.com/inmuebles065/thumbs/DSC06473_thumb.webp"
+                            data-full="https://storage.googleapis.com/inmuebles065/DSC06473.webp"
+                            alt="Elegante Sala de Estar">
+                        <div class="overlay"><span>Ampliar Vista</span></div>
+                    </div>
+                    <div class="gallery-item" onclick="openBloggerLightbox(2)">
+                        <img src="https://storage.googleapis.com/inmuebles065/thumbs/DSC06487_thumb.webp"
+                            data-full="https://storage.googleapis.com/inmuebles065/DSC06487.webp"
+                            alt="Comedor con Iluminación Natural">
+                        <div class="overlay"><span>Ampliar Vista</span></div>
+                    </div>
+                    <div class="gallery-item" onclick="openBloggerLightbox(3)">
+                        <img src="https://storage.googleapis.com/inmuebles065/thumbs/DSC06493_thumb.webp"
+                            data-full="https://storage.googleapis.com/inmuebles065/DSC06493.webp" alt="Terraza Privada">
+                        <div class="overlay"><span>Ampliar Vista</span></div>
+                    </div>
+                    <div class="gallery-item" onclick="openBloggerLightbox(4)">
+                        <img src="https://storage.googleapis.com/inmuebles065/thumbs/DSC06497_thumb.webp"
+                            data-full="https://storage.googleapis.com/inmuebles065/DSC06497.webp"
+                            alt="Dormitorio Suite">
+                        <div class="overlay"><span>Ampliar Vista</span></div>
+                    </div>
+                    <div class="gallery-item" onclick="openBloggerLightbox(5)">
+                        <img src="https://storage.googleapis.com/inmuebles065/thumbs/DSC06503_thumb.webp"
+                            data-full="https://storage.googleapis.com/inmuebles065/DSC06503.webp" alt="Cocina Equipada">
+                        <div class="overlay"><span>Ampliar Vista</span></div>
+                    </div>
+                    <div class="gallery-item" onclick="openBloggerLightbox(6)">
+                        <img src="https://storage.googleapis.com/inmuebles065/thumbs/DSC06512_thumb.webp"
+                            data-full="https://storage.googleapis.com/inmuebles065/DSC06512.webp" alt="Family Room">
+                        <div class="overlay"><span>Ampliar Vista</span></div>
+                    </div>
+                    <div class="gallery-item" onclick="openBloggerLightbox(7)">
+                        <img src="https://storage.googleapis.com/inmuebles065/thumbs/DSC06516_thumb.webp"
+                            data-full="https://storage.googleapis.com/inmuebles065/DSC06516.webp" alt="Interiores">
+                        <div class="overlay"><span>Ampliar Vista</span></div>
+                    </div>
+                    <div class="gallery-item" onclick="openBloggerLightbox(8)">
+                        <img src="https://storage.googleapis.com/inmuebles065/thumbs/DSC06519_thumb.webp"
+                            data-full="https://storage.googleapis.com/inmuebles065/DSC06519.webp"
+                            alt="Espacios Amplios">
+                        <div class="overlay"><span>Ampliar Vista</span></div>
+                    </div>
+                    <div class="gallery-item" onclick="openBloggerLightbox(9)">
+                        <img src="https://storage.googleapis.com/inmuebles065/thumbs/DSC06540_thumb.webp"
+                            data-full="https://storage.googleapis.com/inmuebles065/DSC06540.webp" alt="Acabados Lujo">
+                        <div class="overlay"><span>Ampliar Vista</span></div>
+                    </div>
+                    <div class="gallery-item" onclick="openBloggerLightbox(10)">
+                        <img src="https://storage.googleapis.com/inmuebles065/thumbs/DSC06541_thumb.webp"
+                            data-full="https://storage.googleapis.com/inmuebles065/DSC06541.webp" alt="Vista Interior">
+                        <div class="overlay"><span>Ampliar Vista</span></div>
+                    </div>
+                    <div class="gallery-item" onclick="openBloggerLightbox(11)">
+                        <img src="https://storage.googleapis.com/inmuebles065/thumbs/CAM_20240203062645_0058_D_thumb.webp"
+                            data-full="https://storage.googleapis.com/inmuebles065/CAM_20240203062645_0058_D.webp"
+                            alt="Vista Panorámica">
+                        <div class="overlay"><span>Ampliar Vista</span></div>
+                    </div>
+                    <div class="gallery-item" onclick="openBloggerLightbox(12)">
+                        <img src="https://storage.googleapis.com/inmuebles065/thumbs/CAM_20240203063518_0069_D_thumb.webp"
+                            data-full="https://storage.googleapis.com/inmuebles065/CAM_20240203063518_0069_D.webp"
+                            alt="Detalle Constructivo">
+                        <div class="overlay"><span>Ampliar Vista</span></div>
+                    </div>
+                    <div class="gallery-item" onclick="openBloggerLightbox(13)">
+                        <img src="https://storage.googleapis.com/inmuebles065/thumbs/CAM_20240203072704_0092_D_thumb.webp"
+                            data-full="https://storage.googleapis.com/inmuebles065/CAM_20240203072704_0092_D.webp"
+                            alt="Baño Master">
+                        <div class="overlay"><span>Ampliar Vista</span></div>
+                    </div>
+                    <div class="gallery-item" onclick="openBloggerLightbox(14)">
+                        <img src="https://storage.googleapis.com/inmuebles065/thumbs/CAM_20240203062109_0050_D_thumb.webp"
+                            data-full="https://storage.googleapis.com/inmuebles065/CAM_20240203062109_0050_D.webp"
+                            alt="Habitación">
+                        <div class="overlay"><span>Ampliar Vista</span></div>
+                    </div>
+                    <div class="gallery-item" onclick="openBloggerLightbox(15)">
+                        <img src="https://storage.googleapis.com/inmuebles065/thumbs/CAM_20240203062810_0059_D_thumb.webp"
+                            data-full="https://storage.googleapis.com/inmuebles065/CAM_20240203062810_0059_D.webp"
+                            alt="Fachada Nocturna">
+                        <div class="overlay"><span>Ampliar Vista</span></div>
+                    </div>
+                    <div class="gallery-item" onclick="openBloggerLightbox(16)">
+                        <img src="https://storage.googleapis.com/inmuebles065/thumbs/CAM_20240203055613_0025_D_thumb.webp"
+                            data-full="https://storage.googleapis.com/inmuebles065/CAM_20240203055613_0025_D.webp"
+                            alt="Vista Ciudad">
+                        <div class="overlay"><span>Ampliar Vista</span></div>
+                    </div>
+                    <div class="gallery-item" onclick="openBloggerLightbox(17)">
+                        <img src="https://storage.googleapis.com/inmuebles065/thumbs/CAM_20240203055635_0026_D_thumb.webp"
+                            data-full="https://storage.googleapis.com/inmuebles065/CAM_20240203055635_0026_D.webp"
+                            alt="Entorno">
+                        <div class="overlay"><span>Ampliar Vista</span></div>
+                    </div>
+                    <div class="gallery-item" onclick="openBloggerLightbox(18)">
+                        <img src="https://storage.googleapis.com/inmuebles065/thumbs/CAM_20240203055716_0027_D_thumb.webp"
+                            data-full="https://storage.googleapis.com/inmuebles065/CAM_20240203055716_0027_D.webp"
+                            alt="Sunset">
+                        <div class="overlay"><span>Ampliar Vista</span></div>
+                    </div>
+                    <div class="gallery-item" onclick="openBloggerLightbox(19)">
+                        <img src="https://storage.googleapis.com/inmuebles065/thumbs/CAM_20240203055733_0028_D_thumb.webp"
+                            data-full="https://storage.googleapis.com/inmuebles065/CAM_20240203055733_0028_D.webp"
+                            alt="Distrito">
+                        <div class="overlay"><span>Ampliar Vista</span></div>
+                    </div>
+                    <div class="gallery-item" onclick="openBloggerLightbox(20)">
+                        <img src="https://storage.googleapis.com/inmuebles065/thumbs/CAM_20240203060136_0029_D_thumb.webp"
+                            data-full="https://storage.googleapis.com/inmuebles065/CAM_20240203060136_0029_D.webp"
+                            alt="Vista Aérea">
+                        <div class="overlay"><span>Ampliar Vista</span></div>
+                    </div>
+                    <div class="gallery-item" onclick="openBloggerLightbox(21)">
+                        <img src="https://storage.googleapis.com/inmuebles065/thumbs/CAM_20240203060948_0042_D_thumb.webp"
+                            data-full="https://storage.googleapis.com/inmuebles065/CAM_20240203060948_0042_D.webp"
+                            alt="Perspectiva">
+                        <div class="overlay"><span>Ampliar Vista</span></div>
+                    </div>
+                    <div class="gallery-item" onclick="openBloggerLightbox(22)">
+                        <img src="https://storage.googleapis.com/inmuebles065/thumbs/CAM_20240203061913_0048_D_thumb.webp"
+                            data-full="https://storage.googleapis.com/inmuebles065/CAM_20240203061913_0048_D.webp"
+                            alt="Zonas Cercanas">
+                        <div class="overlay"><span>Ampliar Vista</span></div>
+                    </div>
+                    <div class="gallery-item" onclick="openBloggerLightbox(23)">
+                        <img src="https://storage.googleapis.com/inmuebles065/thumbs/CAM_20240203061928_0049_D_thumb.webp"
+                            data-full="https://storage.googleapis.com/inmuebles065/CAM_20240203061928_0049_D.webp"
+                            alt="Residencial">
+                        <div class="overlay"><span>Ampliar Vista</span></div>
+                    </div>
+                    <div class="gallery-item" onclick="openBloggerLightbox(24)">
+                        <img src="https://storage.googleapis.com/inmuebles065/thumbs/CAM_20240203062158_0052_D_thumb.webp"
+                            data-full="https://storage.googleapis.com/inmuebles065/CAM_20240203062158_0052_D.webp"
+                            alt="Sala">
+                        <div class="overlay"><span>Ampliar Vista</span></div>
+                    </div>
+                    <div class="gallery-item" onclick="openBloggerLightbox(25)">
+                        <img src="https://storage.googleapis.com/inmuebles065/thumbs/CAM_20240203062215_0053_D_thumb.webp"
+                            data-full="https://storage.googleapis.com/inmuebles065/CAM_20240203062215_0053_D.webp"
+                            alt="Detalle">
+                        <div class="overlay"><span>Ampliar Vista</span></div>
+                    </div>
+                    <div class="gallery-item" onclick="openBloggerLightbox(26)">
+                        <img src="https://storage.googleapis.com/inmuebles065/thumbs/CAM_20240203062542_0055_D_thumb.webp"
+                            data-full="https://storage.googleapis.com/inmuebles065/CAM_20240203062542_0055_D.webp"
+                            alt="Áreas">
+                        <div class="overlay"><span>Ampliar Vista</span></div>
+                    </div>
+                    <div class="gallery-item" onclick="openBloggerLightbox(27)">
+                        <img src="https://storage.googleapis.com/inmuebles065/thumbs/CAM_20240203062559_0056_D_thumb.webp"
+                            data-full="https://storage.googleapis.com/inmuebles065/CAM_20240203062559_0056_D.webp"
+                            alt="Modernidad">
+                        <div class="overlay"><span>Ampliar Vista</span></div>
+                    </div>
+                    <div class="gallery-item" onclick="openBloggerLightbox(28)">
+                        <img src="https://storage.googleapis.com/inmuebles065/thumbs/CAM_20240203062902_0060_D_thumb.webp"
+                            data-full="https://storage.googleapis.com/inmuebles065/CAM_20240203062902_0060_D.webp"
+                            alt="Urbano">
+                        <div class="overlay"><span>Ampliar Vista</span></div>
+                    </div>
+                    <div class="gallery-item" onclick="openBloggerLightbox(29)">
+                        <img src="https://storage.googleapis.com/inmuebles065/thumbs/CAM_20240203063038_0062_D_thumb.webp"
+                            data-full="https://storage.googleapis.com/inmuebles065/CAM_20240203063038_0062_D.webp"
+                            alt="Social">
+                        <div class="overlay"><span>Ampliar Vista</span></div>
+                    </div>
+                    <div class="gallery-item" onclick="openBloggerLightbox(30)">
+                        <img src="https://storage.googleapis.com/inmuebles065/thumbs/CAM_20240203063049_0063_D_thumb.webp"
+                            data-full="https://storage.googleapis.com/inmuebles065/CAM_20240203063049_0063_D.webp"
+                            alt="Exteriores">
+                        <div class="overlay"><span>Ampliar Vista</span></div>
+                    </div>
+                    <div class="gallery-item" onclick="openBloggerLightbox(31)">
+                        <img src="https://storage.googleapis.com/inmuebles065/thumbs/CAM_20240203063204_0064_D_thumb.webp"
+                            data-full="https://storage.googleapis.com/inmuebles065/CAM_20240203063204_0064_D.webp"
+                            alt="Parrilla">
+                        <div class="overlay"><span>Ampliar Vista</span></div>
+                    </div>
+                    <div class="gallery-item" onclick="openBloggerLightbox(32)">
+                        <img src="https://storage.googleapis.com/inmuebles065/thumbs/CAM_20240203063232_0065_D_thumb.webp"
+                            data-full="https://storage.googleapis.com/inmuebles065/CAM_20240203063232_0065_D.webp"
+                            alt="Vistas">
+                        <div class="overlay"><span>Ampliar Vista</span></div>
+                    </div>
+                    <div class="gallery-item" onclick="openBloggerLightbox(33)">
+                        <img src="https://storage.googleapis.com/inmuebles065/thumbs/CAM_20240203063304_0066_D_thumb.webp"
+                            data-full="https://storage.googleapis.com/inmuebles065/CAM_20240203063304_0066_D.webp"
+                            alt="Relax">
+                        <div class="overlay"><span>Ampliar Vista</span></div>
+                    </div>
+                    <div class="gallery-item" onclick="openBloggerLightbox(34)">
+                        <img src="https://storage.googleapis.com/inmuebles065/thumbs/CAM_20240203072827_0095_D_thumb.webp"
+                            data-full="https://storage.googleapis.com/inmuebles065/CAM_20240203072827_0095_D.webp"
+                            alt="Baño">
+                        <div class="overlay"><span>Ampliar Vista</span></div>
+                    </div>
+                    <div class="gallery-item" onclick="openBloggerLightbox(35)">
+                        <img src="https://storage.googleapis.com/inmuebles065/thumbs/CAM_20240203072931_0098_D_thumb.webp"
+                            data-full="https://storage.googleapis.com/inmuebles065/CAM_20240203072931_0098_D.webp"
+                            alt="Acabados">
+                        <div class="overlay"><span>Ampliar Vista</span></div>
+                    </div>
+                    <div class="gallery-item" onclick="openBloggerLightbox(36)">
+                        <img src="https://storage.googleapis.com/inmuebles065/thumbs/CAM_20240203075543_0114_D_thumb.webp"
+                            data-full="https://storage.googleapis.com/inmuebles065/CAM_20240203075543_0114_D.webp"
+                            alt="Sunset Ciudad">
+                        <div class="overlay"><span>Ampliar Vista</span></div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="contacto">
+                <div class="contact-container">
+                    <div class="contact-info">
+                        <h3>¿Mas información?</h3>
+                        <p>Déjanos tus datos.</p>
+                        <p style="margin-top: 1rem;"><strong>Precio:</strong> USD 390,000</p>
+                    </div>
+                    <form class="contact-form">
+                        <div class="form-group"><label>Nombre</label><input type="text"></div>
+                        <div class="form-group"><label>Email</label><input type="email"></div>
+                        <div class="form-group"><label>Teléfono</label><input type="tel"></div>
+                        <button type="submit" class="btn">Enviar</button>
+                    </form>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Blogger Lightbox Modal -->
+    <div id="blogger-lightbox">
+        <span class="blogger-close" onclick="closeBloggerLightbox()">&times;</span>
+        <span class="blogger-prev" onclick="changeBloggerImg(-1)">&#10094;</span>
+        <span class="blogger-next" onclick="changeBloggerImg(1)">&#10095;</span>
+        <img id="blogger-lightbox-img">
+    </div>
+
+    <script>
+        // INLINED JAVASCRIPT
+        let bloggerCurrentIndex = 0;
+        const bloggerGalleryItems = document.querySelectorAll('.gallery-item img');
+        const bloggerImages = Array.from(bloggerGalleryItems).map(img => ({
+            src: img.getAttribute('data-full') || img.src
+        }));
+
+        // Navbar & Hamburger Logic
+        const bloggerHamburger = document.querySelector('.hamburger');
+        const bloggerNavLinks = document.querySelector('.nav-links');
+
+        if (bloggerHamburger) {
+            bloggerHamburger.addEventListener('click', () => {
+                bloggerHamburger.classList.toggle('active');
+                bloggerNavLinks.classList.toggle('active');
+            });
+
+            document.querySelectorAll('.nav-links a').forEach(link => {
+                link.addEventListener('click', () => {
+                    bloggerHamburger.classList.remove('active');
+                    bloggerNavLinks.classList.remove('active');
+                });
+            });
+        }
+
+        function openBloggerLightbox(index) {
+            bloggerCurrentIndex = index;
+            document.getElementById('blogger-lightbox').style.display = 'block';
+            document.getElementById('blogger-lightbox-img').src = bloggerImages[index].src;
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeBloggerLightbox() {
+            document.getElementById('blogger-lightbox').style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        function changeBloggerImg(step) {
+            bloggerCurrentIndex = (bloggerCurrentIndex + step + bloggerImages.length) % bloggerImages.length;
+            document.getElementById('blogger-lightbox-img').src = bloggerImages[bloggerCurrentIndex].src;
+        }
+
+        // WhatsApp Contact Form Handling
+        const contactForm = document.querySelector('.contact-form');
+        if (contactForm) {
+            contactForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const nameInput = contactForm.querySelector('input[type="text"]');
+                const emailInput = contactForm.querySelector('input[type="email"]');
+                const phoneInput = contactForm.querySelector('input[type="tel"]');
+
+                if (!nameInput.value || !emailInput.value || !phoneInput.value) {
+                    alert('Por favor complete todos los campos.');
+                    return;
+                }
+
+                const message = `Hola, mi nombre es ${nameInput.value}. Estoy interesado en el Dúplex Penthouse de La Aurora (Marzano 15XX). Mi teléfono es ${phoneInput.value} y mi email es ${emailInput.value}.`;
+                const encodedMessage = encodeURIComponent(message);
+                const whatsappUrl = `https://wa.me/51985663335?text=${encodedMessage}`;
+
+                window.open(whatsappUrl, '_blank');
+
+                contactForm.innerHTML = `
+                    <div style="text-align: center; padding: 2rem; animation: zoom 0.5s;">
+                        <div style="font-size: 3rem; color: var(--accent); margin-bottom: 1rem;">✓</div>
+                        <h3 style="color: var(--accent); margin-bottom: 1rem;">¡Redirigiendo a WhatsApp!</h3>
+                        <p>Gracias por tu interés en Luxury Aurora. Se ha abierto una ventana de chat para contactar a tu asesor.</p>
+                    </div>
+                `;
+            });
+        }
+
+        // Scroll Reveal
+        const revealElements = document.querySelectorAll('.feature-card, .gallery-item, .property-stats');
+        revealElements.forEach(el => el.classList.add('reveal'));
+
+        window.addEventListener('scroll', () => {
+            revealElements.forEach(el => {
+                if (el.getBoundingClientRect().top < window.innerHeight * 0.9) {
+                    el.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
